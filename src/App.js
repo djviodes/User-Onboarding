@@ -27,7 +27,6 @@ function App() {
             <div>
               <h1>{item.name}</h1>
               <p>{item.email}</p>
-              <p>{item.password}</p>
               <p>{item.role}</p>
             </div>
           )
