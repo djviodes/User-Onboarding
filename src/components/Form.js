@@ -148,6 +148,7 @@ const Form = props => {
             <label htmlFor='name'>Name:</label>
             <StyledInputContainer>
                 <StyledInput 
+                    data-cy='name'
                     id='name'
                     type='text'
                     name='name'
@@ -161,6 +162,7 @@ const Form = props => {
             <label htmlFor='email'>Email:</label>
             <StyledInputContainer>
                 <StyledInput 
+                    data-cy='email'
                     id='email'
                     type='email'
                     name='email'
@@ -174,6 +176,7 @@ const Form = props => {
             <label htmlFor='password'>Password:</label>
             <StyledInputContainer>
                 <StyledInput 
+                    data-cy='password'
                     id='password'
                     type='text'
                     name='password'
@@ -185,7 +188,7 @@ const Form = props => {
             </StyledInputContainer>
 
             <label htmlFor='role'>Select Your Role: </label>
-            <StyledSelect id='role' name='role' value={user.role} onChange={changeHandler}>
+            <StyledSelect data-cy='role' id='role' name='role' value={user.role} onChange={changeHandler}>
                 <option value=''>--Please Choose An Option--</option>
                 <option value='Frontend Developer'>Frontend Developer</option>
                 <option value='Backend Developer'>Backend Developer</option>
@@ -197,6 +200,7 @@ const Form = props => {
 
             <StyledTerms htmlFor='terms'>
                 <input 
+                    data-cy='terms'
                     type='checkbox'
                     id='terms'
                     name='terms'
@@ -207,7 +211,7 @@ const Form = props => {
                 {errorState.terms === false ? <StyledError>{errorState.terms}</StyledError> : null}
             </StyledTerms>
 
-            <StyledButton type='submit' disabled={disabled}>Submit</StyledButton>
+            <StyledButton data-cy='submit' type='submit' disabled={disabled}>Submit</StyledButton>
         </StyledForm>
     )
 }
