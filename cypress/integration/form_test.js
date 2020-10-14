@@ -14,7 +14,13 @@ describe("Testing our form inputs", () => {
     it("Check the Terms of Service Box", () => {
         cy.get('[data-cy=terms]').check();
     });
+    it("Select an option from the Dropdown Menu", () => {
+        cy.get('[data-cy=role]').select("React Specialist")
+    })
     it("Submit the Form", () => {
         cy.get('form').submit();
     });
+    afterEach(() => {
+        cy.get('[data-cy=submit]').click();
+    })
 });
