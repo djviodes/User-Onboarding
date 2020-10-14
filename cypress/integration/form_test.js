@@ -20,7 +20,7 @@ describe("Testing our form inputs", () => {
     it("Submit the Form", () => {
         cy.get('form').submit();
     });
-    afterEach(() => {
+    after(() => {
         cy.get('[data-cy=submit]').click();
     })
 });
